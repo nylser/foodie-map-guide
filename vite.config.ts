@@ -8,6 +8,22 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      // Proxy for Google Maps Geocoding API
+      '/geocoding': {
+        target: 'https://maps.googleapis.com/maps/api/geocode',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/geocoding/, ''),
+        secure: true
+      },
+      // Proxy for OpenStreetMap Nominatim API (alternative)
+      '/nominatim': {
+        target: 'https://nominatim.openstreetmap.org',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/nominatim/, ''),
+        secure: true
+      }
+    }
   },
   plugins: [
     react(),
