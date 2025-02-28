@@ -22,16 +22,20 @@ const CategorySection: React.FC<CategorySectionProps> = ({
     <div className="mb-10 animate-fadeIn">
       <div className="flex items-center mb-4">
         <div className={`w-10 h-10 rounded-full ${categoryColor.split(' ')[0]} flex items-center justify-center mr-3`}>
-          <i className={`fas fa-${icon}`}></i>
+          <i className={`fas fa-${icon} text-${categoryColor.split(' ')[1].replace('text-', '')}`}></i>
         </div>
-        <h2 className="text-2xl font-medium">{title}</h2>
+        <h2 className="text-2xl font-medium text-gray-800">{title}</h2>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
         {restaurants.map((restaurant, index) => (
           <div 
             key={restaurant.id}
             className="animate-fadeIn"
+            style={{ 
+              animationDelay: `${index * 100}ms`, 
+              animationFillMode: 'both' 
+            }}
           >
             <RestaurantCard 
               restaurant={restaurant} 

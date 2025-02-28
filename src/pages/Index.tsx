@@ -32,7 +32,7 @@ const Index: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm p-6 animate-fadeIn">
             <div className="mb-6">
               <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">My Favorites Near the Office</span>
-              <h1 className="text-3xl font-medium mt-1">Food & Drink Guide</h1>
+              <h1 className="text-3xl font-medium mt-1 text-gray-800">Food & Drink Guide</h1>
               <p className="text-gray-600 mt-2">
                 A curated selection of the best dining options within walking distance from our office.
               </p>
