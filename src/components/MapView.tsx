@@ -74,7 +74,7 @@ const MapView: React.FC<MapViewProps> = ({
       marker.bindPopup(`
         <div class="p-2">
           <h3 class="font-medium">${restaurant.name}</h3>
-          <p class="text-sm text-gray-500">${category.label}</p>
+          <p class="text-sm text-gray-500">${restaurant.address}</p>
           <a href="${restaurant.mapUrl}" target="_blank" class="text-blue-500 text-sm">Open in Google Maps</a>
         </div>
       `);

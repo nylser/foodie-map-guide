@@ -34,9 +34,9 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
           </span>
         </div>
         
-        <div className="flex items-center text-sm text-gray-500 mb-4">
-          <MapPin size={16} className="mr-1.5" />
-          <span className="text-balance truncate">View on Google Maps</span>
+        <div className="flex items-center text-sm text-gray-500 mb-2">
+          <MapPin size={16} className="mr-1.5 shrink-0" />
+          <span className="text-balance">{restaurant.address}</span>
         </div>
         
         <div className="mt-auto pt-3">

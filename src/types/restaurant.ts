@@ -4,6 +4,7 @@ export interface Restaurant {
   name: string;
   mapUrl: string;
   category: 'restaurant' | 'grocery' | 'bakery' | 'cafe';
+  address: string;
   coordinates: {
     lat: number;
     lng: number;

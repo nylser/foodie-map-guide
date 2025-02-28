@@ -7,6 +7,7 @@ export const restaurants: Restaurant[] = [
     name: 'La Commedia',
     mapUrl: 'https://maps.app.goo.gl/rqWrNF4K7AnfSyz6A',
     category: 'restaurant',
+    address: 'Gögginger Str. 49, 86159 Augsburg',
     coordinates: {
       lat: 50.1112, 
       lng: 8.6837
@@ -17,6 +18,7 @@ export const restaurants: Restaurant[] = [
     name: 'Restaurant Doruk',
     mapUrl: 'https://maps.app.goo.gl/LhcqGRe1t3tWVMLj8',
     category: 'restaurant',
+    address: 'Gögginger Str. 50, 86159 Augsburg',
     coordinates: {
       lat: 50.1089, 
       lng: 8.6860
@@ -27,6 +29,7 @@ export const restaurants: Restaurant[] = [
     name: 'Anh Thu',
     mapUrl: 'https://maps.app.goo.gl/q3qMSLR8voZyUG9v8',
     category: 'restaurant',
+    address: 'Gögginger Str. 70, 86159 Augsburg',
     coordinates: {
       lat: 50.1092, 
       lng: 8.6826
@@ -37,6 +40,7 @@ export const restaurants: Restaurant[] = [
     name: 'Restaurant Antons',
     mapUrl: 'https://maps.app.goo.gl/uJv6BRFNKvoUBDXV7',
     category: 'restaurant',
+    address: 'Sulzerstraße 20, 86159 Augsburg',
     coordinates: {
       lat: 50.1099, 
       lng: 8.6850
@@ -47,6 +51,7 @@ export const restaurants: Restaurant[] = [
     name: 'tegut',
     mapUrl: 'https://maps.app.goo.gl/L5BgxEfeWRxAyYnR7',
     category: 'grocery',
+    address: 'Eichleitnerstraße 14, 86199 Augsburg',
     coordinates: {
       lat: 50.1079, 
       lng: 8.6845
@@ -57,6 +62,7 @@ export const restaurants: Restaurant[] = [
     name: 'Lidl',
     mapUrl: 'https://maps.app.goo.gl/5Lyfd5zYRKpRfmZn7',
     category: 'grocery',
+    address: 'Eichleitnerstraße 10, 86199 Augsburg',
     coordinates: {
       lat: 50.1073, 
       lng: 8.6875
@@ -67,6 +73,7 @@ export const restaurants: Restaurant[] = [
     name: 'Drini market',
     mapUrl: 'https://maps.app.goo.gl/QoaTAeWt2SN7ECkB8',
     category: 'grocery',
+    address: 'Gögginger Str. 91, 86199 Augsburg',
     coordinates: {
       lat: 50.1083, 
       lng: 8.6834
@@ -77,6 +84,7 @@ export const restaurants: Restaurant[] = [
     name: 'Schneider bakery',
     mapUrl: 'https://maps.app.goo.gl/ZXWfYGQNWNXPZR7B7',
     category: 'bakery',
+    address: 'Gögginger Str. 93, 86199 Augsburg',
     coordinates: {
       lat: 50.1097, 
       lng: 8.6867
@@ -84,9 +92,10 @@ export const restaurants: Restaurant[] = [
   },
   {
     id: '9',
-    name: 'Wolf backery',
+    name: 'Wolf bakery',
     mapUrl: 'https://maps.app.goo.gl/CqZxabXMb2Uf1unS9',
     category: 'bakery',
+    address: 'Schertlinstraße 19, 86159 Augsburg',
     coordinates: {
       lat: 50.1086, 
       lng: 8.6843
@@ -97,6 +106,7 @@ export const restaurants: Restaurant[] = [
     name: 'Café Cabresso',
     mapUrl: 'https://maps.app.goo.gl/izfYeqfG4MRPcUdj9',
     category: 'cafe',
+    address: 'Gögginger Str. 90, 86199 Augsburg',
     coordinates: {
       lat: 50.1101, 
       lng: 8.6832
@@ -104,9 +114,10 @@ export const restaurants: Restaurant[] = [
   },
   {
     id: '11',
-    name: 'Dersim backery',
+    name: 'Dersim bakery',
     mapUrl: 'https://maps.app.goo.gl/572FxAtYUknuE2yr9',
     category: 'bakery',
+    address: 'Gögginger Str. 35, 86159 Augsburg',
     coordinates: {
       lat: 50.1091, 
       lng: 8.6855
@@ -117,6 +128,7 @@ export const restaurants: Restaurant[] = [
     name: 'Cafè Cappuccin',
     mapUrl: 'https://maps.app.goo.gl/GbyG7Fa5kgh36Yz18',
     category: 'cafe',
+    address: 'Gögginger Str. 104, 86199 Augsburg',
     coordinates: {
       lat: 50.1088, 
       lng: 8.6829
@@ -152,6 +164,6 @@ export const getCategoryRestaurants = (category: string) => {
 };
 
 export const getOfficeCoordinates = () => ({
-  lat: 50.1091,
-  lng: 8.6844
+  lat: 48.3444,  // Updated to Augsburg coordinates
+  lng: 10.8982   // Updated to Augsburg coordinates
 });
