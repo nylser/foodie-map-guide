@@ -9,8 +9,8 @@ export const restaurants: Restaurant[] = [
     category: 'restaurant',
     address: 'Gögginger Str. 49, 86159 Augsburg',
     coordinates: {
-      lat: 50.1112, 
-      lng: 8.6837
+      lat: 48.3558, 
+      lng: 10.8868
     }
   },
   {
@@ -20,8 +20,8 @@ export const restaurants: Restaurant[] = [
     category: 'restaurant',
     address: 'Gögginger Str. 50, 86159 Augsburg',
     coordinates: {
-      lat: 50.1089, 
-      lng: 8.6860
+      lat: 48.3559, 
+      lng: 10.8865
     }
   },
   {
@@ -31,8 +31,8 @@ export const restaurants: Restaurant[] = [
     category: 'restaurant',
     address: 'Gögginger Str. 70, 86159 Augsburg',
     coordinates: {
-      lat: 50.1092, 
-      lng: 8.6826
+      lat: 48.3545, 
+      lng: 10.8852
     }
   },
   {
@@ -42,8 +42,8 @@ export const restaurants: Restaurant[] = [
     category: 'restaurant',
     address: 'Sulzerstraße 20, 86159 Augsburg',
     coordinates: {
-      lat: 50.1099, 
-      lng: 8.6850
+      lat: 48.3563, 
+      lng: 10.8859
     }
   },
   {
@@ -53,8 +53,8 @@ export const restaurants: Restaurant[] = [
     category: 'grocery',
     address: 'Eichleitnerstraße 14, 86199 Augsburg',
     coordinates: {
-      lat: 50.1079, 
-      lng: 8.6845
+      lat: 48.3522, 
+      lng: 10.8858
     }
   },
   {
@@ -64,8 +64,8 @@ export const restaurants: Restaurant[] = [
     category: 'grocery',
     address: 'Eichleitnerstraße 10, 86199 Augsburg',
     coordinates: {
-      lat: 50.1073, 
-      lng: 8.6875
+      lat: 48.3520, 
+      lng: 10.8861
     }
   },
   {
@@ -75,8 +75,8 @@ export const restaurants: Restaurant[] = [
     category: 'grocery',
     address: 'Gögginger Str. 91, 86199 Augsburg',
     coordinates: {
-      lat: 50.1083, 
-      lng: 8.6834
+      lat: 48.3531, 
+      lng: 10.8845
     }
   },
   {
@@ -86,8 +86,8 @@ export const restaurants: Restaurant[] = [
     category: 'bakery',
     address: 'Gögginger Str. 93, 86199 Augsburg',
     coordinates: {
-      lat: 50.1097, 
-      lng: 8.6867
+      lat: 48.3529, 
+      lng: 10.8844
     }
   },
   {
@@ -97,8 +97,8 @@ export const restaurants: Restaurant[] = [
     category: 'bakery',
     address: 'Schertlinstraße 19, 86159 Augsburg',
     coordinates: {
-      lat: 50.1086, 
-      lng: 8.6843
+      lat: 48.3568, 
+      lng: 10.8876
     }
   },
   {
@@ -108,8 +108,8 @@ export const restaurants: Restaurant[] = [
     category: 'cafe',
     address: 'Gögginger Str. 90, 86199 Augsburg',
     coordinates: {
-      lat: 50.1101, 
-      lng: 8.6832
+      lat: 48.3532, 
+      lng: 10.8846
     }
   },
   {
@@ -119,8 +119,8 @@ export const restaurants: Restaurant[] = [
     category: 'bakery',
     address: 'Gögginger Str. 35, 86159 Augsburg',
     coordinates: {
-      lat: 50.1091, 
-      lng: 8.6855
+      lat: 48.3566, 
+      lng: 10.8875
     }
   },
   {
@@ -130,8 +130,8 @@ export const restaurants: Restaurant[] = [
     category: 'cafe',
     address: 'Gögginger Str. 104, 86199 Augsburg',
     coordinates: {
-      lat: 50.1088, 
-      lng: 8.6829
+      lat: 48.3520, 
+      lng: 10.8839
     }
   }
 ];
@@ -164,6 +164,6 @@ export const getCategoryRestaurants = (category: string) => {
 };
 
 export const getOfficeCoordinates = () => ({
-  lat: 48.3444,  // Updated to Augsburg coordinates
-  lng: 10.8982   // Updated to Augsburg coordinates
+  lat: 48.3550,  // Center of the Augsburg area with our locations
+  lng: 10.8857   // Center of the Augsburg area with our locations
 });
