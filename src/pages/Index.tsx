@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react';
-import { restaurants, categoryMap, getOfficeCoordinates } from '../data/restaurants';
+import React, { useEffect, useState } from 'react';
+import { categoryMap, getOfficeCoordinates, loadRestaurants } from '../data/restaurants';
 import { Restaurant } from '../types/restaurant';
 import CategorySection from '../components/CategorySection';
 import MapView from '../components/MapView';
@@ -9,15 +9,33 @@ import Navbar from '../components/Navbar';
 const Index: React.FC = () => {
   const [highlightedRestaurant, setHighlightedRestaurant] = useState<Restaurant | null>(null);
   const officeCoordinates = getOfficeCoordinates();
+  const [restaurants, setRestaurants] = useState<Restaurant[] | []>([]);
+  const [restaurantsByCategory, setRestaurantsByCategory] = useState<{category: String, restaurants: Restaurant[]}[] | []>([]);
   
+  useEffect(() => {
+    // Define an async function inside the effect
+    async function fetchData() {
+      try {
+        // Wait for the promise to resolve
+        const resolvedRestaurants = await loadRestaurants() 
+        const restaurantsByCategory = Object.entries(categoryMap).map(([category, info]) => {
+          return {
+            category,
+            ...info,
+            restaurants: resolvedRestaurants.filter(r => r.category === category)
+          };
+        });
+        setRestaurantsByCategory(restaurantsByCategory);
+        setRestaurants(restaurants)
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    // Call the async function
+    fetchData();
+  }, []); // Empty dependency array means this effect runs once after the first render
   // Group restaurants by category
-  const restaurantsByCategory = Object.entries(categoryMap).map(([category, info]) => {
-    return {
-      category,
-      ...info,
-      restaurants: restaurants.filter(r => r.category === category)
-    };
-  });
 
   const handleRestaurantHover = (restaurant: Restaurant | null) => {
     setHighlightedRestaurant(restaurant);
